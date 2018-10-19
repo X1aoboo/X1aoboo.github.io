@@ -4,18 +4,40 @@
 <head>
   <meta charset="utf-8">
   
-  <title>x1aoboo</title>
+  <title>SPOT学习笔记(SPOT-UI) | x1aoboo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="x1aoboo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
+<meta name="keywords" content="Spot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SPOT学习笔记(SPOT-UI)">
+<meta property="og:url" content="http://yoursite.com/2018/10/19/SPOT-UI/index.html">
 <meta property="og:site_name" content="x1aoboo">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/spot-ingest.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/netflow-sus.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/dns-sus.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-1.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-2.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-3.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-4.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-net.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-net2.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/sus-scoring.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/threat.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/story-netflow.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/story-netflow.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/story-dns.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/summary.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-2.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-3.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-4.png">
+<meta property="og:updated_time" content="2018-10-19T09:11:07.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x1aoboo">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="SPOT学习笔记(SPOT-UI)">
+<meta name="twitter:description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/19/SPOT-UI/spot-ingest.png">
   
     <link rel="alternative" href="/atom.xml" title="x1aoboo" type="application/atom+xml">
   
@@ -67,9 +89,7 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-SPOT-UI" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-SPOT-UI" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/19/SPOT-UI/" class="article-date">
   <time datetime="2018-10-19T07:18:44.000Z" itemprop="datePublished">2018-10-19</time>
@@ -86,8 +106,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/19/SPOT-UI/">SPOT学习笔记(SPOT-UI)</a>
+    <h1 class="article-title" itemprop="name">
+      SPOT学习笔记(SPOT-UI)
     </h1>
   
 
@@ -194,62 +214,24 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/18/hello-world/" class="article-date">
-  <time datetime="2018-10-18T15:16:06.914Z" itemprop="datePublished">2018-10-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/18/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2018/10/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2018/10/18/hello-world/" data-id="cjnfouen20001ksvkr7x84tjh" class="article-share-link" data-share="baidu" data-title="Hello World">Share</a>
-      
-
-      
-        <a href="http://yoursite.com/2018/10/18/hello-world/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
   
 </article>
 
 
-  
-
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2018/10/19/SPOT-UI/" data-title="SPOT学习笔记(SPOT-UI)" data-url="http://yoursite.com/2018/10/19/SPOT-UI/"></div>
+  </section>
 </section>
       
       <aside id="sidebar">
