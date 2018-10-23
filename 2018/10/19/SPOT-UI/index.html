@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '6.4.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -135,7 +135,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-2.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-3.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/19/SPOT-UI/prob-4.png">
-<meta property="og:updated_time" content="2018-10-20T06:40:59.968Z">
+<meta property="og:updated_time" content="2018-10-22T15:45:30.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SPOT学习笔记(SPOT-UI)">
 <meta name="twitter:description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
@@ -283,9 +283,6 @@
   
 
   
-    
-
-  
 
   
 </nav>
@@ -305,6 +302,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -384,7 +384,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-20 14:40:59" itemprop="dateModified" datetime="2018-10-20T14:40:59+08:00">2018-10-20</time>
+                <time title="修改时间：2018-10-22 23:45:30" itemprop="dateModified" datetime="2018-10-22T23:45:30+08:00">2018-10-22</time>
               
             
           </span>
@@ -450,6 +450,7 @@
 
       
         <h1 id="APACHE-SPOT"><a href="#APACHE-SPOT" class="headerlink" title="APACHE SPOT"></a>APACHE SPOT</h1><h2 id="简介-INTRODUCTION"><a href="#简介-INTRODUCTION" class="headerlink" title="简介 INTRODUCTION"></a>简介 INTRODUCTION</h2><p>Apache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyter 提供图形化交互能力，产生少量且准确的安全威胁事件呈现给用户。</p>
+<a id="more"></a>
 <h2 id="数据采集-SPOT-Ingest"><a href="#数据采集-SPOT-Ingest" class="headerlink" title="数据采集 SPOT-Ingest"></a>数据采集 SPOT-Ingest</h2><p>Spot克服了如何提高从不同数据源中进行数据采集的挑战，尤其是大多数时间，采集器每秒发送远超过服务器可用资源（CPU，内存）的数以千计的网络事件。借助Spot，可以确保服务可用性接近100%，且不会丢失数据。Spot可以在需要时启用更快速，可扩展的分布式服务。由于其分布式体系结构，当执行采集器守护程序的数据节点在高峰工作负载崩溃，致使数据排队时，不会发生数据丢失。这种架构确保可用性接近99.99999%，而不会损失信息。<br><img src="spot-ingest.png" alt="image">  </p>
 <h3 id="采集模块内部"><a href="#采集模块内部" class="headerlink" title="采集模块内部"></a>采集模块内部</h3><p>Spot-Collectors<br>守护进程在后台对文件系统路径进行监视或者采集。采集器检测通过网络工具产生的新文件或留在路径中用以采集的之前产生的数据。随后，采集器使用解剖工具（例如nfdump或tshark）将这些数据转换为可读的格式。</p>
 <h3 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h3><p>对每个采集进程的实例创建一个新的主题。分块由采集中的Workers数量来定义。Kafka存储采集器发送来的数据，并由Worker来解析数据。</p>
@@ -632,6 +633,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="xiaobo" />
+            
               <p class="site-author-name" itemprop="name">xiaobo</p>
               <p class="site-description motion-element" itemprop="description">blog</p>
           </div>
@@ -687,6 +692,15 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/X1aoboo" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -755,7 +769,7 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
 
 
 
@@ -847,6 +861,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
