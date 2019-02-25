@@ -722,6 +722,10 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/02/25/Next-gitalk/" rel="prev" title="Next-gitalk">
+                Next-gitalk <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -795,7 +799,7 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1132,6 +1136,8 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script src="/js/src/md5.min.js"></script>
    <script type="text/javascript">
         var gitalk = new Gitalk({
           clientID: '4d4e5ad57ff206962431',
@@ -1139,7 +1145,7 @@ c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none
           repo: 'x1aoboo.github.io',
           owner: 'x1aoboo',
           admin: ['x1aoboo'],
-          id: location.pathname,
+          id: md5(location.pathname),
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           

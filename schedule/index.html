@@ -119,17 +119,17 @@
 
 
 
-  <meta name="description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局">
+  <meta name="description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局 2019-02-25 添加了gitalk作为站点的评论系统">
 <meta property="og:type" content="website">
 <meta property="og:title" content="schedule">
 <meta property="og:url" content="http://x1aoboo.com/schedule/index.html">
 <meta property="og:site_name" content="x1aoboo">
-<meta property="og:description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局">
+<meta property="og:description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局 2019-02-25 添加了gitalk作为站点的评论系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-25T12:35:47.059Z">
+<meta property="og:updated_time" content="2019-02-25T15:40:03.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="schedule">
-<meta name="twitter:description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局">
+<meta name="twitter:description" content="2018-10-22 添加schedule页面，记录网站更新记录  2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能  2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局 2019-02-25 添加了gitalk作为站点的评论系统">
 
 
 
@@ -386,6 +386,7 @@
 <li><p>2018-10-24 添加站点及文章的字数统计、时间统计、访问记录功能</p>
 </li>
 <li>2018-10-25 添加了文章的更新时间等字段，优化了些站点图标与布局</li>
+<li>2019-02-25 添加了gitalk作为站点的评论系统</li>
 </ul>
 </blockquote>
 
@@ -452,7 +453,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -773,6 +774,8 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script src="/js/src/md5.min.js"></script>
    <script type="text/javascript">
         var gitalk = new Gitalk({
           clientID: '4d4e5ad57ff206962431',
@@ -780,7 +783,7 @@
           repo: 'x1aoboo.github.io',
           owner: 'x1aoboo',
           admin: ['x1aoboo'],
-          id: location.pathname,
+          id: md5(location.pathname),
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           
