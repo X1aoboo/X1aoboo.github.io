@@ -798,12 +798,24 @@
                 
               
 
-              <time title="创建时间：2018-10-25 20:05:20 / 修改时间：21:41:09" itemprop="dateCreated datePublished" datetime="2018-10-25T20:05:20+08:00">2018-10-25</time>
+              <time title="创建时间：2018-10-25 20:05:20" itemprop="dateCreated datePublished" datetime="2018-10-25T20:05:20+08:00">2018-10-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-25 19:51:42" itemprop="dateModified" datetime="2019-02-25T19:51:42+08:00">2019-02-25</time>
               
             
           </span>
@@ -848,7 +860,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">909</span>
+                <span title="本文字数">911</span>
               
 
               
@@ -884,7 +896,7 @@
       
         
           <h1 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>求解$a^b%c$<br>其中$1\leq a,b,c\leq 10^9$</p>
-<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>首先需要知道模运算的乘法运算规则 : <strong>(a <em> b) % p = (a % p </em> b % p) % p</strong><br>根据上面的规则，可以想到一种最朴素的快速幂算法，即将a依次累乘，同时不停对中间值进行取模运算，这不失为一种可行方案，但其复杂度为<strong><em>O(n)</em></strong>，即使采取分治算法其时间复杂度也不会有明显下降，而快速幂算法的时间复杂度为<strong><em>O(log(n))</em></strong>，可以有效降低其运算时间。<br>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>首先需要知道模运算的乘法运算规则 : <strong>(a * b) % p = (a % p * b % p) % p</strong><br>根据上面的规则，可以想到一种最朴素的快速幂算法，即将a依次累乘，同时不停对中间值进行取模运算，这不失为一种可行方案，但其复杂度为<strong><em>O(n)</em></strong>，即使采取分治算法其时间复杂度也不会有明显下降，而快速幂算法的时间复杂度为<strong><em>O(log(n))</em></strong>，可以有效降低其运算时间。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/10/25/快速幂/#more" rel="contents">
