@@ -119,17 +119,21 @@
 
 
 
-  <meta name="description" content="blog">
+  <meta name="description" content="之前初搭Hexo时本想在Next主题中集成评论功能，无奈当时多说，网易云跟帖等评论系统已经关闭或即将关闭服务，而看Disqus等也有或多或少的问题，索性便放弃了这个功能。不过最近看到一个基于Github Issue和 Preact的评论插件gitalk非常流行，使用也较为方便，于是便上网找了相关博客将其集成于Next。">
+<meta name="keywords" content="HEXO,Next,gitalk">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Next-gitalk">
+<meta property="og:title" content="在Hexo的Next主题中集成gitalk">
 <meta property="og:url" content="http://x1aoboo.com/2019/02/25/Next-gitalk/index.html">
 <meta property="og:site_name" content="x1aoboo">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="之前初搭Hexo时本想在Next主题中集成评论功能，无奈当时多说，网易云跟帖等评论系统已经关闭或即将关闭服务，而看Disqus等也有或多或少的问题，索性便放弃了这个功能。不过最近看到一个基于Github Issue和 Preact的评论插件gitalk非常流行，使用也较为方便，于是便上网找了相关博客将其集成于Next。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-25T15:38:03.303Z">
+<meta property="og:image" content="http://x1aoboo.com/2019/02/25/Next-gitalk/register.png">
+<meta property="og:image" content="http://x1aoboo.com/2019/02/25/Next-gitalk/appset.png">
+<meta property="og:updated_time" content="2019-02-25T17:31:40.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Next-gitalk">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="在Hexo的Next主题中集成gitalk">
+<meta name="twitter:description" content="之前初搭Hexo时本想在Next主题中集成评论功能，无奈当时多说，网易云跟帖等评论系统已经关闭或即将关闭服务，而看Disqus等也有或多或少的问题，索性便放弃了这个功能。不过最近看到一个基于Github Issue和 Preact的评论插件gitalk非常流行，使用也较为方便，于是便上网找了相关博客将其集成于Next。">
+<meta name="twitter:image" content="http://x1aoboo.com/2019/02/25/Next-gitalk/register.png">
 
 
 
@@ -146,7 +150,7 @@
   };
 </script>
 
-  <title>Next-gitalk | x1aoboo</title>
+  <title>在Hexo的Next主题中集成gitalk | x1aoboo</title>
   
 
 
@@ -365,7 +369,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Next-gitalk
+          <h2 class="post-title" itemprop="name headline">在Hexo的Next主题中集成gitalk
               
             
           </h2>
@@ -394,8 +398,49 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-26 01:31:40" itemprop="dateModified" datetime="2019-02-26T01:31:40+08:00">2019-02-26</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HEXO/" itemprop="url" rel="index"><span itemprop="name">HEXO</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HEXO/Next/" itemprop="url" rel="index"><span itemprop="name">Next</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -425,7 +470,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">4.5k</span>
               
 
               
@@ -439,7 +484,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -459,7 +504,49 @@
       
 
       
-        
+        <p>之前初搭Hexo时本想在Next主题中集成评论功能，无奈当时多说，网易云跟帖等评论系统已经关闭或即将关闭服务，而看Disqus等也有或多或少的问题，索性便放弃了这个功能。不过最近看到一个基于<code>Github Issue</code>和 <code>Preact</code>的评论插件gitalk非常流行，使用也较为方便，于是便上网找了相关博客将其集成于Next。<br><a id="more"></a></p>
+<blockquote>
+<p>参考博客：<a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">https://asdfv1929.github.io/2018/01/20/gitalk/</a><br>Error: Validation Failed解决策略：<a href="https://liujunzhou.top/2018/8/10/gitalk-error/#Error-Validation-Failed" target="_blank" rel="noopener">https://liujunzhou.top/2018/8/10/gitalk-error/#Error-Validation-Failed</a></p>
+</blockquote>
+<h1 id="gitalk简介"><a href="#gitalk简介" class="headerlink" title="gitalk简介"></a>gitalk简介</h1><p>Gitalk 是一个基于 GitHub Issue 和 Preact 开发的评论插件。</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>使用 GitHub 登录</li>
+<li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr, ru]</li>
+<li>支持个人或组织</li>
+<li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li>
+<li>快捷键提交评论 （cmd|ctrl + enter）</li>
+</ul>
+<p>Gitalk详情请访问：<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">https://github.com/gitalk/gitalk/blob/master/readme-cn.md</a></p>
+<h1 id="应用注册"><a href="#应用注册" class="headerlink" title="应用注册"></a>应用注册</h1><p>首先在Github上注册新应用，注册链接：<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">https://github.com/settings/applications/new</a><br>注册需有github账号，若无账号需先注册，注册链接：<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">https://github.com/join?source=header-home</a></p>
+<p><img src="register.png" alt="注册界面" title="注册界面"></p>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li>Application name: 应用名称，随意命名即可（eg：hexo-gitalk）</li>
+<li>Homepage URL: 应用主页的地址，必须使用以http://或https://为首的绝对地址，若用私有域名对<code>github page</code>地址做过解析，则以私有域名为准</li>
+<li>Application description：应用描述，随意即可</li>
+<li>Authorization callback URL：授权回调地址，与Homepage URL同理，设为域名解析后的地址</li>
+</ul>
+<p>点击注册后界面会跳转至应用设置界面，其中的Client ID与Client Secret之后需要用到。</p>
+<p><img src="appset.png" alt="设置界面" title="设置界面"></p>
+<h1 id="Next-配置文件"><a href="#Next-配置文件" class="headerlink" title="Next 配置文件"></a>Next 配置文件</h1><h2 id="gitalk-swig"><a href="#gitalk-swig" class="headerlink" title="gitalk.swig"></a>gitalk.swig</h2><p>在Next主题的<code>/layout/_third-party/comments/</code>目录新建<code>gitalk.swig</code>，并添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.comments &amp;&amp; theme.gitalk.enable %&#125;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;</span><br><span class="line">&lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        var gitalk = new Gitalk(&#123;</span><br><span class="line">        clientID: &apos;&#123;&#123; theme.gitalk.ClientID &#125;&#125;&apos;,</span><br><span class="line">        clientSecret: &apos;&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;&apos;,</span><br><span class="line">        repo: &apos;&#123;&#123; theme.gitalk.repo &#125;&#125;&apos;,</span><br><span class="line">        owner: &apos;&#123;&#123; theme.gitalk.githubID &#125;&#125;&apos;,</span><br><span class="line">        admin: [&apos;&#123;&#123; theme.gitalk.adminUser &#125;&#125;&apos;],</span><br><span class="line">        id: location.pathname,</span><br><span class="line">        distractionFreeMode: &apos;&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">        gitalk.render(&apos;gitalk-container&apos;)           </span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="comments-swig"><a href="#comments-swig" class="headerlink" title="comments.swig"></a>comments.swig</h2><p>在Next主题的<code>/layout/_partials/comments.swig</code>文件中添加如下内容，注意添加在最后一个<code>elseif</code>之前，保证有效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif theme.gitalk.enable %&#125;</span><br><span class="line">&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="index-swig"><a href="#index-swig" class="headerlink" title="index.swig"></a>index.swig</h2><p>在Next主题的<code>layout/_third-party/comments/index.swig</code>文件中添加如下内容，位置随意：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include &apos;gitalk.swig&apos; %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="gitalk-styl"><a href="#gitalk-styl" class="headerlink" title="gitalk.styl"></a>gitalk.styl</h2><p>在Next主题的<code>/source/css/_common/components/third-party/</code>目录中新建<code>gitalk.styl</code>文件，添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.gt-header a, .gt-comments a, .gt-popup a</span><br><span class="line">  border-bottom: none;</span><br><span class="line">.gt-container .gt-popup .gt-action.is--active:before</span><br><span class="line">  top: 0.7em;</span><br></pre></td></tr></table></figure></p>
+<h2 id="third-party-styl"><a href="#third-party-styl" class="headerlink" title="third-party.styl"></a>third-party.styl</h2><p>在Next主题的<code>/source/css/_common/components/third-party/third-party.styl</code>文件最后一行上添加如下内容，引入样式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;gitalk&quot;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>在Next主题的配置文件<code>next/_config.yml</code>中添加如下内容（建议在评论插件那一块插入，以后方便再配置）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: true</span><br><span class="line">  githubID: github帐号  </span><br><span class="line">  repo: 仓库名称   </span><br><span class="line">  ClientID: Client ID</span><br><span class="line">  ClientSecret: Client Secret</span><br><span class="line">  adminUser: 初始化评论github帐号 </span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>ClientId 与 ClientSecret复制之前的即可</li>
+<li>githubID 与 repo 虽然github显示首字母大写，但徜若昵称为小写则以小写为准</li>
+<li>enable 表示gitablk功能是否开启</li>
+<li>distractionFreeMode 表示免打扰模式是否开启</li>
+</ul>
+<h1 id="初始化应用"><a href="#初始化应用" class="headerlink" title="初始化应用"></a>初始化应用</h1><p>在第一次使用时gitalk尚未初始化，点击使用<code>GitHub登录</code>即可</p>
+<h1 id="Error-Validation-Failed"><a href="#Error-Validation-Failed" class="headerlink" title="Error: Validation Failed"></a>Error: Validation Failed</h1><p>有一部分博客可能会出现这种错误，原因是在<code>gitalk</code>的<code>issue</code>中发现，若<code>location.pathname</code>大于50，便会出现这种错误。<br>解决策略是使用MD5编码URL缩短地址长度，方法如下：</p>
+<h2 id="md5-min-js"><a href="#md5-min-js" class="headerlink" title="md5.min.js"></a>md5.min.js</h2><p>下载<a href="https://github.com/blueimp/JavaScript-MD5/blob/master/js/md5.min.js" target="_blank" rel="noopener">md5.min.js</a>文件并将其粘贴至Next主题的<code>themes\next\source\js\src\</code>目录下</p>
+<h2 id="gitalk-swig-1"><a href="#gitalk-swig-1" class="headerlink" title="gitalk.swig"></a>gitalk.swig</h2><p>将之前创建的<code>gitalk.swig</code>文件替换如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.comments &amp;&amp; theme.gitalk.enable %&#125;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">   &lt;script src=&quot;/js/src/md5.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        var gitalk = new Gitalk(&#123;</span><br><span class="line">          clientID: &apos;&#123;&#123; theme.gitalk.ClientID &#125;&#125;&apos;,</span><br><span class="line">          clientSecret: &apos;&#123;&#123; theme.gitalk.ClientSecret &#125;&#125;&apos;,</span><br><span class="line">          repo: &apos;&#123;&#123; theme.gitalk.repo &#125;&#125;&apos;,</span><br><span class="line">          owner: &apos;&#123;&#123; theme.gitalk.githubID &#125;&#125;&apos;,</span><br><span class="line">          admin: [&apos;&#123;&#123; theme.gitalk.adminUser &#125;&#125;&apos;],</span><br><span class="line">          id: md5(location.pathname),</span><br><span class="line">          distractionFreeMode: &apos;&#123;&#123; theme.gitalk.distractionFreeMode &#125;&#125;&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">        gitalk.render(&apos;gitalk-container&apos;)           </span><br><span class="line">       &lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>至此便成功将gitlab集成至Hexo的Nexo主题中。</p>
+
       
     </div>
 
@@ -480,7 +567,7 @@
     <strong>本文作者： </strong>x1aoboo</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://x1aoboo.com/2019/02/25/Next-gitalk/" title="Next-gitalk">http://x1aoboo.com/2019/02/25/Next-gitalk/</a>
+    <a href="http://x1aoboo.com/2019/02/25/Next-gitalk/" title="在Hexo的Next主题中集成gitalk">http://x1aoboo.com/2019/02/25/Next-gitalk/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -490,6 +577,16 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HEXO/" rel="tag"><i class="fa fa-tag"></i> HEXO</a>
+          
+            <a href="/tags/Next/" rel="tag"><i class="fa fa-tag"></i> Next</a>
+          
+            <a href="/tags/gitalk/" rel="tag"><i class="fa fa-tag"></i> gitalk</a>
+          
+        </div>
       
 
       
@@ -556,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,7 +707,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -624,7 +732,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -665,6 +777,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#gitalk简介"><span class="nav-text">gitalk简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用注册"><span class="nav-text">应用注册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Next-配置文件"><span class="nav-text">Next 配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gitalk-swig"><span class="nav-text">gitalk.swig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comments-swig"><span class="nav-text">comments.swig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#index-swig"><span class="nav-text">index.swig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitalk-styl"><span class="nav-text">gitalk.styl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#third-party-styl"><span class="nav-text">third-party.styl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-yml"><span class="nav-text">_config.yml</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化应用"><span class="nav-text">初始化应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-Validation-Failed"><span class="nav-text">Error: Validation Failed</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#md5-min-js"><span class="nav-text">md5.min.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitalk-swig-1"><span class="nav-text">gitalk.swig</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -692,7 +820,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">15k</span>
   
 
   
@@ -703,7 +831,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">14 分钟</span>
   
 </div>
 
