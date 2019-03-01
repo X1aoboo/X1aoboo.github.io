@@ -130,13 +130,14 @@
 
   <meta name="description" content="blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="x1aoboo">
-<meta property="og:url" content="http://x1aoboo.com/categories/Hadoop/SPOT/index.html">
+<meta property="og:title" content="相册">
+<meta property="og:url" content="http://x1aoboo.com/photos/index.html">
 <meta property="og:site_name" content="x1aoboo">
 <meta property="og:description" content="blog">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-01T18:47:57.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x1aoboo">
+<meta name="twitter:title" content="相册">
 <meta name="twitter:description" content="blog">
 
 
@@ -144,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://x1aoboo.com/categories/Hadoop/SPOT/">
+  <link rel="canonical" href="http://x1aoboo.com/photos/">
 
 
 
@@ -154,7 +155,7 @@
   };
 </script>
 
-  <title>分类: SPOT | x1aoboo</title>
+  <title>相册 | x1aoboo</title>
   
 
 
@@ -201,7 +202,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,7 +267,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
@@ -282,7 +283,7 @@
         
         
           
-          <li class="menu-item menu-item-photos">
+          <li class="menu-item menu-item-photos menu-item-active">
     <a href="/photos/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
   </li>
@@ -384,57 +385,57 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>SPOT<small>分类</small>
-        </h2>
-      </div>
+<h2 class="post-title" itemprop="name headline">相册</h2>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
 
       
+      
+      
+      <div class="post-body">
         
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
         
-            <a class="post-title-link" href="/posts/16d7d20f/" itemprop="url">
-              
-                <span itemprop="name">SPOT学习笔记(SPOT-UI)</span>
-              
-            </a>
+          <h1>Photo Page Test</h1>
         
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-19T15:18:44+08:00" content="2018-10-19">
-          10-19
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
+      
+      
       
     </div>
+    
 
+
+
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+
+  
+    <div id="gitalk-container"></div>
+    
+  
+
+
 
         </div>
         
@@ -770,6 +771,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -792,6 +797,23 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script src="/js/src/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '4d4e5ad57ff206962431',
+          clientSecret: '7332f7ae9957c078baefdc30858ad0a160603673',
+          repo: 'x1aoboo.github.io',
+          owner: 'x1aoboo',
+          admin: ['x1aoboo'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 

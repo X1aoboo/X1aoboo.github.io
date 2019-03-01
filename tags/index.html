@@ -106,7 +106,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: false,
     lazyload: true,
@@ -283,6 +283,14 @@
         
         
           
+          <li class="menu-item menu-item-photos">
+    <a href="/photos/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-schedule">
     <a href="/schedule/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
@@ -346,6 +354,9 @@
             
 
     
+    
+      
+      
     
       
       
@@ -575,7 +586,17 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="https://steamcommunity.com/id/x1aoboo" target="_blank" title="Steam" rel="external nofollow"><i class="fa fa-fw fa-steam-square"></i>Steam</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/images/wechat.png" target="_blank" title="Wechat" rel="external nofollow"><i class="fa fa-fw fa-wechat"></i>Wechat</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:xiaobo0705@gmail.com" target="_blank" title="Gmail" rel="external nofollow"><i class="fa fa-fw fa-google"></i>Gmail</a>
                   
                 </span>
               
@@ -692,6 +713,8 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -729,9 +752,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -765,16 +785,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
