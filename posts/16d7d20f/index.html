@@ -128,25 +128,41 @@
 
 
 
-  <meta name="description" content="呜呜呜~~，Steam寒假折扣又喜+1，寒假学习计划又泡汤了，G胖真可恶！（MHW真好玩！隔了好久，突然发现hexo的那些命令又忘光了….. so，搬运下官网的常用命令，以后方便查阅。我们不生产知识，我们只是大自然的搬运工，内容来源https://hexo.io/zh-cn/docs/commands.html">
-<meta name="keywords" content="HEXO">
+  <meta name="description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
+<meta name="keywords" content="SPOT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO常用命令">
-<meta property="og:url" content="http://x1aoboo.com/2019/02/24/HEXO常用命令/index.html">
+<meta property="og:title" content="SPOT学习笔记(SPOT-UI)">
+<meta property="og:url" content="http://x1aoboo.com/posts/16d7d20f/index.html">
 <meta property="og:site_name" content="x1aoboo">
-<meta property="og:description" content="呜呜呜~~，Steam寒假折扣又喜+1，寒假学习计划又泡汤了，G胖真可恶！（MHW真好玩！隔了好久，突然发现hexo的那些命令又忘光了….. so，搬运下官网的常用命令，以后方便查阅。我们不生产知识，我们只是大自然的搬运工，内容来源https://hexo.io/zh-cn/docs/commands.html">
+<meta property="og:description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-25T15:47:06.000Z">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/spot-ingest.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/netflow-sus.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/dns-sus.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-1.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-2.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-3.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-4.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-net.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-net2.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/sus-scoring.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/threat.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/story-netflow.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/story-netflow.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/story-dns.png">
+<meta property="og:image" content="http://x1aoboo.com/posts/16d7d20f/summary.png">
+<meta property="og:updated_time" content="2019-02-25T08:59:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HEXO常用命令">
-<meta name="twitter:description" content="呜呜呜~~，Steam寒假折扣又喜+1，寒假学习计划又泡汤了，G胖真可恶！（MHW真好玩！隔了好久，突然发现hexo的那些命令又忘光了….. so，搬运下官网的常用命令，以后方便查阅。我们不生产知识，我们只是大自然的搬运工，内容来源https://hexo.io/zh-cn/docs/commands.html">
+<meta name="twitter:title" content="SPOT学习笔记(SPOT-UI)">
+<meta name="twitter:description" content="APACHE SPOT简介 INTRODUCTIONApache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyte">
+<meta name="twitter:image" content="http://x1aoboo.com/posts/16d7d20f/spot-ingest.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://x1aoboo.com/2019/02/24/HEXO常用命令/">
+  <link rel="canonical" href="http://x1aoboo.com/posts/16d7d20f/">
 
 
 
@@ -156,7 +172,7 @@
   };
 </script>
 
-  <title>HEXO常用命令 | x1aoboo</title>
+  <title>SPOT学习笔记(SPOT-UI) | x1aoboo</title>
   
 
 
@@ -358,7 +374,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x1aoboo.com/2019/02/24/HEXO常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://x1aoboo.com/posts/16d7d20f/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aoboo">
@@ -375,7 +391,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">HEXO常用命令
+          <h2 class="post-title" itemprop="name headline">SPOT学习笔记(SPOT-UI)
               
             
           </h2>
@@ -400,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2019-02-24 22:59:13" itemprop="dateCreated datePublished" datetime="2019-02-24T22:59:13+08:00">2019-02-24</time>
+              <time title="创建时间：2018-10-19 15:18:44" itemprop="dateCreated datePublished" datetime="2018-10-19T15:18:44+08:00">2018-10-19</time>
             
 
             
@@ -417,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-25 23:47:06" itemprop="dateModified" datetime="2019-02-25T23:47:06+08:00">2019-02-25</time>
+                <time title="修改时间：2019-02-25 16:59:04" itemprop="dateModified" datetime="2019-02-25T16:59:04+08:00">2019-02-25</time>
               
             
           </span>
@@ -434,7 +450,21 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HEXO/" itemprop="url" rel="index"><span itemprop="name">HEXO</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hadoop/" itemprop="url" rel="index"><span itemprop="name">Hadoop</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hadoop/SPOT/" itemprop="url" rel="index"><span itemprop="name">SPOT</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
 
                 
                 
@@ -469,7 +499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.4k</span>
+                <span title="本文字数">2.9k</span>
               
 
               
@@ -483,7 +513,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -503,95 +533,62 @@
       
 
       
-        <p>呜呜呜<del>~</del>~，Steam寒假折扣又喜+1，寒假学习计划又泡汤了，G胖真可恶！（MHW真好玩！<br>隔了好久，突然发现hexo的那些命令又忘光了….. so，搬运下官网的常用命令，以后方便查阅。<br>我们不生产知识，我们只是大自然的搬运工，内容来源<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands.html</a><br><a id="more"></a></p>
-<h1 id="init"><a href="#init" class="headerlink" title="init"></a>init</h1><p><code>hexo init [folder]</code><br>新建一个网站。如果没有设置<code>folder</code>，Hexo默认在目前的文件夹建立网站。</p>
-<h1 id="new"><a href="#new" class="headerlink" title="new"></a>new</h1><p><code>hexo new [layout] &lt;title&gt;</code><br>新建一篇文章。如果没有设置<code>layout</code>的话，默认使用<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">_config.yml</a>中的<code>default_layout</code>参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<h1 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h1><p><code>hexo generate</code><br>生成静态文件。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-d, --deploy</code></td>
-<td style="text-align:center">文件生成后立即部署网站</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-w, --watch</code></td>
-<td style="text-align:center">监视文件变动</td>
-</tr>
-</tbody>
-</table>
-<p>该命令可以简写为<br><code>hexo g</code></p>
-<h1 id="publich"><a href="#publich" class="headerlink" title="publich"></a>publich</h1><p><code>hexo publish [layout] &lt;filename&gt;</code><br>发表草稿。</p>
-<h1 id="server"><a href="#server" class="headerlink" title="server"></a>server</h1><p><code>hexo server</code><br>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选项</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-p, --port</code></td>
-<td style="text-align:center">重设端口</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-s, --static</code></td>
-<td style="text-align:center">只使用静态文件</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>-l, --log</code></td>
-<td style="text-align:center">启动日记记录，使用覆盖记录格式</td>
-</tr>
-</tbody>
-</table>
-<h1 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h1><p><code>hexo deploy</code><br>部署网站。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-g, --generate</code></td>
-<td style="text-align:center">部署之前预先生成静态文件</td>
-</tr>
-</tbody>
-</table>
-<p>该命令可以简写为：<br><code>hexo d</code></p>
-<h1 id="render"><a href="#render" class="headerlink" title="render"></a>render</h1><p><code>hexo render &lt;file1&gt; [file2] ...</code><br>渲染文件。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>-o, --output</code></td>
-<td style="text-align:center">设置输出路径</td>
-</tr>
-</tbody>
-</table>
-<h1 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h1><p><code>hexo migrate &lt;type&gt;</code><br>从其他博客系统 迁移内容。</p>
-<h1 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h1><p><code>hexo clean</code><br>清除缓存文件(<code>db.json</code>)和已生成的静态文件(<code>public</code>)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><p><code>hexo list &lt;type&gt;</code><br>列出网站资料。</p>
-<h1 id="version"><a href="#version" class="headerlink" title="version"></a>version</h1><p><code>hexo version</code><br>显示 Hexo 版本。</p>
-<h1 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h1><h2 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h2><p><code>hexo --safe</code><br>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h2 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h2><p><code>hexo --debug</code><br>在终端中显示调试信息并记录到<code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并<a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="noopener">提交调试信息到GitHub</a>。</p>
-<h2 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h2><p><code>hexo --silent</code><br>隐藏终端信息。</p>
-<h2 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h2><p><code>hexo --config custom.yml</code><br>自定义配置文件的路径，执行后将不再使用<code>_config.yml</code>。</p>
-<h2 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h2><p><code>hexo --draft</code><br>显示<code>source/_drafts</code>文件夹中的草稿文章。</p>
-<h2 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h2><p><code>hexo --cwd /path/to/cwd</code><br>自定义当前工作目录（Current working directory）的路径。</p>
+        <h1 id="APACHE-SPOT"><a href="#APACHE-SPOT" class="headerlink" title="APACHE SPOT"></a>APACHE SPOT</h1><h2 id="简介-INTRODUCTION"><a href="#简介-INTRODUCTION" class="headerlink" title="简介 INTRODUCTION"></a>简介 INTRODUCTION</h2><p>Apache Spot是一个基于网络流量和数据包分析，通过独特的机器学习方法，发现潜在安全威胁和未知网络攻击能力的开源方案。目前Apache Spot 已支持对Netflow、sflow、DNS、Proxy的网络流量分析，主要依靠HDFS、Hive 提供存储能力，Spark提供计算能力，基于LDA算法提供无监督式机器学习能力，最终依赖Jupyter 提供图形化交互能力，产生少量且准确的安全威胁事件呈现给用户。</p>
+<a id="more"></a>
+<h2 id="数据采集-SPOT-Ingest"><a href="#数据采集-SPOT-Ingest" class="headerlink" title="数据采集 SPOT-Ingest"></a>数据采集 SPOT-Ingest</h2><p>Spot克服了如何提高从不同数据源中进行数据采集的挑战，尤其是大多数时间，采集器每秒发送远超过服务器可用资源（CPU，内存）的数以千计的网络事件。借助Spot，可以确保服务可用性接近100%，且不会丢失数据。Spot可以在需要时启用更快速，可扩展的分布式服务。由于其分布式体系结构，当执行采集器守护程序的数据节点在高峰工作负载崩溃，致使数据排队时，不会发生数据丢失。这种架构确保可用性接近99.99999%，而不会损失信息。<br><img src="spot-ingest.png" alt="image">  </p>
+<h3 id="采集模块内部"><a href="#采集模块内部" class="headerlink" title="采集模块内部"></a>采集模块内部</h3><p>Spot-Collectors<br>守护进程在后台对文件系统路径进行监视或者采集。采集器检测通过网络工具产生的新文件或留在路径中用以采集的之前产生的数据。随后，采集器使用解剖工具（例如nfdump或tshark）将这些数据转换为可读的格式。</p>
+<h3 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h3><p>对每个采集进程的实例创建一个新的主题。分块由采集中的Workers数量来定义。Kafka存储采集器发送来的数据，并由Worker来解析数据。</p>
+<h3 id="Spot-Workers"><a href="#Spot-Workers" class="headerlink" title="Spot Workers"></a>Spot Workers</h3><p>和采集器一样，Workers是后台运行的守护进程，关注特定的Kafka主题和分块。Spot Workers读取、解析并将数据存储在特定的Hive表中，随后用于机器学习算法。<br>当前有两种类型的Workers，一是Python Workers，使用多线程和已定义的解析器来处理数据；二是Spark-Streaming Workers，使用spark-streaming上下文（微批处理）执行Spark应用来读取Kafka中<br>的数据。</p>
+<h2 id="机器学习-SPOT-ML"><a href="#机器学习-SPOT-ML" class="headerlink" title="机器学习 SPOT-ML"></a>机器学习 SPOT-ML</h2><p>Spot机器学习组件包含用于对从网络收集的Netflow、DNS、代理日志进行可疑连接分析的例程。分析使用收集的网络事件，并生成被认为最不可能事件的列表，这些事件被认为是最可疑的。它们依赖Spot采集组件来收集加载Netflow、DNS和代理记录。  </p>
+<p>Spot使用主题模型来发现正常和不正常的行为。它将与某个IP相关的日志集视为一个文档，并使用LDA来发现这些文档集中隐藏的语义结构。</p>
+<p>LDA是用于离散数据的生成概率模型，如文本语料库。LDA是一种三层贝叶斯模型，其中文档的每个词都是从一组潜在主题的混合中生成的。我们将LDA应用于网络流量，通过聚合和离散将网络日志条目转换为单词。在这种方式中，文档对应于IP地址，单词对应于日志条目（与IP地址相关的），主题对应于常见网络活动配置。</p>
+<p>Spot对每个IP地址的网络行为建立一个概率模型。每个网络日志条目根据模型分配一个估计的可能性（分数）。这些低分事件会被标注为“可疑的”，用于以后的分析。</p>
+<h2 id="可视化-SPOT-OA"><a href="#可视化-SPOT-OA" class="headerlink" title="可视化 SPOT-OA"></a>可视化 SPOT-OA</h2><p>Spot-OA基于IPython、D3JS、jQuery、Bootstrap、ReactJS技术向用户提供数据处理、转换以及数据可视化的能力。当前版本主要通过Suspicious、Threat Investigation、Story Board三个视图页面提供针对Flow、DNS、Proxy事件的可视化分析能力。此外，通过Ingest Summary Notebook视图页面，提供了解指定时间段内数据采集情况的能力。</p>
+<h3 id="可疑分析-suspicious-html"><a href="#可疑分析-suspicious-html" class="headerlink" title="可疑分析 (suspicious.html)"></a>可疑分析 (suspicious.html)</h3><p>通过查看Apache Spot的机器学习算法检测到的安全威胁列表来研究可疑的网络活动。<br>Suspicious视图页面用于呈现Spot-ML发现的可疑活动，主要由四个面板组成。  </p>
+<p>Suspicious以数据列表的形式展现Spot-ML 发现的可疑活动；Network View以可视化的形式表现这些可疑活动；Details用于挖掘某个可疑活动更为细节的信息。Scoring提供一种专家能力，通过人为介入的方式修正或改善机器学习模型。</p>
+<h4 id="NetFlow-Suspicious"><a href="#NetFlow-Suspicious" class="headerlink" title="NetFlow Suspicious"></a>NetFlow Suspicious</h4><p><img src="netflow-sus.png" alt="image"></p>
+<h4 id="DNS-Suspicious"><a href="#DNS-Suspicious" class="headerlink" title="DNS Suspicious"></a>DNS Suspicious</h4><p><img src="dns-sus.png" alt="image"></p>
+<h6 id="Suspicious"><a href="#Suspicious" class="headerlink" title="Suspicious"></a>Suspicious</h6><ol>
+<li>通过选择可疑帧中的特定行，将突出显示网络视图中的连接。<br><img src="sus-1.png" alt="image"></li>
+<li>通过执行此行选择，“详细信息框架”显示在与选择的可疑记录同一分钟内发生的源和目标IP地址之间的所有Netflow记录。<br><img src="sus-2.png" alt="image"></li>
+<li>IP地址带有附加信息，显示该IP的信誉值及地理位置信息上下文。<br><img src="sus-3.png" alt="image"><br><img src="sus-4.png" alt="image"></li>
+</ol>
+<h6 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h6><ol>
+<li>显示节点IP，右击该节点可对信息进行过滤，只显示与该IP有关的流信息，以便将IP过滤器应用于可疑网页。<br><img src="sus-net.png" alt="image"></li>
+<li>左击网络节点，在Details中显示该IP与其他IP连接的和弦图<br><img src="sus-net2.png" alt="image"></li>
+</ol>
+<h6 id="Scoring"><a href="#Scoring" class="headerlink" title="Scoring"></a>Scoring</h6><p>此框架包含一个部分，分析人员可以使用不同的值对IP地址和端口进行评分。为了给特定连接分配风险，请使用所有组合框的组合选择它，选择正确的风险评级（1 =高风险，2=中等/潜在风险，3=低/已接受风险）并点击分数按钮。从每个列表中选择一个值将缩小巧合，因此如果分析师希望使用一个相同的相关属性（即src端口80）对所有连接进行评分，则只选择相关的组合框，并将其余部分保留在第一行在顶部。<br><img src="sus-scoring.png" alt="image"></p>
+<h3 id="威胁调查-Threat-Investigation-threat-investigation-html"><a href="#威胁调查-Threat-Investigation-threat-investigation-html" class="headerlink" title="威胁调查 Threat Investigation (threat-investigation.html)"></a>威胁调查 Threat Investigation (threat-investigation.html)</h3><p>Threat Investigation视图页面是分析结果展示在Storyboard之前的最后一步，安全分析师在这个页面对即将展示的分析结果进行最后一步核查。<br><img src="threat.png" alt="image"><br>从列表中选择任何IP，然后单击“Search”可以查看有关它的特定详细信息。将执行对流表的查询，查看最初收集的原始数据，以查找白天与任何其他IP地址之间的所有通信，收集其他信息，例如：</p>
+<blockquote>
+<ul>
+<li>max&amp;avg发送/接收的字节数</li>
+<li>max&amp;avg发送/接收的数据包数</li>
+<li>目的端口</li>
+<li>源端口</li>
+<li>第一个和最后一个连接时间</li>
+<li>连接数  </li>
+</ul>
+</blockquote>
+<p>根据查询的结果，该模块将显示包含结果的表，其中包含以下信息：</p>
+<blockquote>
+<ul>
+<li>每个连接数的顶部IP</li>
+<li>传输的每个字节的顶级IP</li>
+<li>可以通过更新top_results变量的值来设置存储在字典（n）中的结果数。</li>
+</ul>
+</blockquote>
+<h3 id="故事板-Story-Board-storyboard-html"><a href="#故事板-Story-Board-storyboard-html" class="headerlink" title="故事板 Story Board (storyboard.html)"></a>故事板 Story Board (storyboard.html)</h3><p>Storyboard视图页面用于呈现系统最终的分析结果，供用户掌握高风险的安全威胁事件以及更进一步的信息。</p>
+<blockquote>
+<ul>
+<li>事件进展</li>
+<li>影响分析</li>
+<li>地理位置</li>
+<li>时间时间轴</li>
+</ul>
+</blockquote>
+<h4 id="NetFlow-Story-Board"><a href="#NetFlow-Story-Board" class="headerlink" title="NetFlow Story Board"></a>NetFlow Story Board</h4><p><img src="story-netflow.png" alt="image"><br><img src="story-netflow.png" width="50%" height="50%"></p>
+<h4 id="DNS-Story-Board"><a href="#DNS-Story-Board" class="headerlink" title="DNS Story Board"></a>DNS Story Board</h4><p><img src="story-dns.png" alt="image"><br>Ingest Summary 用于了解系统的数据采集情况，可以查看采集的数据类型在指定时间段的数据量分布详情。<br><img src="summary.png" alt="image">  </p>
+<h2 id="参考-Reference"><a href="#参考-Reference" class="headerlink" title="参考 Reference"></a>参考 Reference</h2><p>[1] <a href="http://blog.nsfocus.net/apache-spot/#1_Apache_Spot" target="_blank" rel="noopener">http://blog.nsfocus.net/apache-spot/#1_Apache_Spot</a><br>[2] <a href="http://spot.apache.org/doc/" target="_blank" rel="noopener">http://spot.apache.org/doc/</a> </p>
 
       
     </div>
@@ -613,7 +610,7 @@
     <strong>本文作者： </strong>x1aoboo</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://x1aoboo.com/2019/02/24/HEXO常用命令/" title="HEXO常用命令">http://x1aoboo.com/2019/02/24/HEXO常用命令/</a>
+    <a href="http://x1aoboo.com/posts/16d7d20f/" title="SPOT学习笔记(SPOT-UI)">http://x1aoboo.com/posts/16d7d20f/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -626,7 +623,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HEXO/" rel="tag"><i class="fa fa-tag"></i> HEXO</a>
+            <a href="/tags/SPOT/" rel="tag"><i class="fa fa-tag"></i> SPOT</a>
           
         </div>
       
@@ -639,8 +636,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/25/快速幂/" rel="next" title="快速幂">
-                <i class="fa fa-chevron-left"></i> 快速幂
+              <a href="/posts/4a17b156/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -649,8 +646,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/24/MarkDown常用语法/" rel="prev" title="MarkDown常用语法">
-                MarkDown常用语法 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d0a0586c/" rel="prev" title="Hadoop学习笔记(HDFS)">
+                Hadoop学习笔记(HDFS) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -832,7 +829,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#init"><span class="nav-text">init</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#new"><span class="nav-text">new</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#generate"><span class="nav-text">generate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#publich"><span class="nav-text">publich</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#server"><span class="nav-text">server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#deploy"><span class="nav-text">deploy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#render"><span class="nav-text">render</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#migrate"><span class="nav-text">migrate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clean"><span class="nav-text">clean</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#list"><span class="nav-text">list</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#version"><span class="nav-text">version</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选项"><span class="nav-text">选项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安全模式"><span class="nav-text">安全模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试模式"><span class="nav-text">调试模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简洁模式"><span class="nav-text">简洁模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义配置文件的路径"><span class="nav-text">自定义配置文件的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示草稿"><span class="nav-text">显示草稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义-CWD"><span class="nav-text">自定义 CWD</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#APACHE-SPOT"><span class="nav-text">APACHE SPOT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-INTRODUCTION"><span class="nav-text">简介 INTRODUCTION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据采集-SPOT-Ingest"><span class="nav-text">数据采集 SPOT-Ingest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#采集模块内部"><span class="nav-text">采集模块内部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka"><span class="nav-text">Kafka</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spot-Workers"><span class="nav-text">Spot Workers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习-SPOT-ML"><span class="nav-text">机器学习 SPOT-ML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可视化-SPOT-OA"><span class="nav-text">可视化 SPOT-OA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可疑分析-suspicious-html"><span class="nav-text">可疑分析 (suspicious.html)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NetFlow-Suspicious"><span class="nav-text">NetFlow Suspicious</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS-Suspicious"><span class="nav-text">DNS Suspicious</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Suspicious"><span class="nav-text">Suspicious</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Network"><span class="nav-text">Network</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Scoring"><span class="nav-text">Scoring</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#威胁调查-Threat-Investigation-threat-investigation-html"><span class="nav-text">威胁调查 Threat Investigation (threat-investigation.html)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#故事板-Story-Board-storyboard-html"><span class="nav-text">故事板 Story Board (storyboard.html)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NetFlow-Story-Board"><span class="nav-text">NetFlow Story Board</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS-Story-Board"><span class="nav-text">DNS Story Board</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考-Reference"><span class="nav-text">参考 Reference</span></a></li></ol></div>
             
 
           </div>
