@@ -131,10 +131,11 @@
   <meta name="description" content="blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="x1aoboo">
-<meta property="og:url" content="http://x1aoboo.com/archives/2019/index.html">
+<meta property="og:url" content="http://x1aoboo.com/about/index.html">
 <meta property="og:site_name" content="x1aoboo">
 <meta property="og:description" content="blog">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-01T11:54:20.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="x1aoboo">
 <meta name="twitter:description" content="blog">
@@ -144,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://x1aoboo.com/archives/2019/">
+  <link rel="canonical" href="http://x1aoboo.com/about/">
 
 
 
@@ -154,7 +155,7 @@
   };
 </script>
 
-  <title>归档 | x1aoboo</title>
+  <title> | x1aoboo</title>
   
 
 
@@ -201,7 +202,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,7 +251,7 @@
         
         
           
-          <li class="menu-item menu-item-about">
+          <li class="menu-item menu-item-about menu-item-active">
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
   </li>
@@ -274,7 +275,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
@@ -373,148 +374,57 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline"></h2>
+
+<div class="post-meta">
   
   
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+
+
+
+</div>
+
+</header>
 
       
-      <span class="archive-page-counter">
-        
+      
+      
+      <div class="post-body">
         
         
           
         
-        嗯..! 目前共计 7 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/3a6c8e44/" itemprop="url">
-              
-                <span itemprop="name">在Hexo的Next主题中集成gitalk</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-25T23:38:03+08:00" content="2019-02-25">
-          02-25
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/d18ae5e4/" itemprop="url">
-              
-                <span itemprop="name">MarkDown常用语法</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-24T23:26:22+08:00" content="2019-02-24">
-          02-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/d215e7d8/" itemprop="url">
-              
-                <span itemprop="name">HEXO常用命令</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-24T22:59:13+08:00" content="2019-02-24">
-          02-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
     </div>
+    
+
+
+
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+
+  
+    <div id="gitalk-container"></div>
+    
+  
+
+
 
         </div>
         
@@ -851,6 +761,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -873,6 +787,23 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script src="/js/src/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '4d4e5ad57ff206962431',
+          clientSecret: '7332f7ae9957c078baefdc30858ad0a160603673',
+          repo: 'x1aoboo.github.io',
+          owner: 'x1aoboo',
+          admin: ['x1aoboo'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
