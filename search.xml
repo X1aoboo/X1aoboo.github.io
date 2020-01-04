@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-15.三数之和]]></title>
+    <url>%2Fposts%2Ff9cb4fb6%2F</url>
+    <content type="text"><![CDATA[LeetCode-15 三数之和原题链接 题目描述给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。 注意：答案中不可以包含重复的三元组。例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]， 满足要求的三元组集合为：[&emsp; [-1, 0, 1],&emsp; [-1, -1, 2]] 解题思路看到题目，比较朴素的方法就是逐个枚举，由$a + b + c = 0$ =&gt; $a + b = -c$，所以可以逐个选择nums中的unique元素作为-c，再遍历nums选择符合条件的两个元素，复杂度为$O(n^3)$。当然，这个方法也能稍微优化一下，通过hash记录nums中出现过的所有元素，再在枚举a和b时，将b等价为-c-a，于hash表中查询-c-a。因为在C++中一般用STL的map容器实现hash，其内部实现基于红黑树，因此其find()方法复杂度为$O(logn)$，因此整体复杂度为$O(n^2logn)$。当然这个复杂度还是不太满足题目要求，一般都会超时，所以还需要时间复杂度更低的方法。 123456789101112131415161718192021222324252627282930313233class Solution &#123;public: vector&lt;vector&lt;int&gt;&gt; threeSum(vector&lt;int&gt;&amp; nums) &#123; map&lt;int, int&gt; p; map&lt;vector&lt;int&gt;, int&gt; p2; vector&lt;int&gt; tar, tmp; vector&lt;vector&lt;int&gt;&gt; ans; if (nums.size() &lt; 3) return ans; for (int i=0; i&lt;nums.size(); i++) if (p.find(nums[i]) == p.end()) &#123; p[nums[i]] = 1; tar.push_back(nums[i]); &#125; else p[nums[i]] += 1; for (int i=0; i&lt;tar.size(); i++) &#123; int pp = tar[i]; for (int j=0; j&lt;tar.size(); j++) &#123; if (i == j &amp;&amp; p[pp] &lt; 2) continue; tmp.clear(); tmp.push_back(pp); tmp.push_back(tar[j]); tmp.push_back(-tar[j] - pp); sort(tmp.begin(), tmp.end()); if (p2.find(tmp) != p2.end()) continue; p2[tmp] = 1; map&lt;int, int&gt;::iterator q = p.find(-tar[j] - pp); if (q == p.end()) continue; if (q-&gt;first == pp &amp;&amp; p[pp] &lt; 2) continue; if (q-&gt;first == tar[j] &amp;&amp; q-&gt;second &lt; 2) continue; if (q-&gt;first == tar[j] &amp;&amp; q-&gt;first == pp &amp;&amp; q-&gt;second &lt; 3) continue; ans.push_back(tmp); &#125; &#125; return ans; &#125;&#125;; 因为$a + b + c = 0$ =&gt; $a + b = -c$，所以对于每一个-c，都存在一个解空间G，有 $a, b \in G$,对于解空间G中的元素，若将其排序为一个有序序列[G],用l和r代表[G]的左右边界元素，那么我们就可以通过比较l + r + c 与 0 的关系在解空间序列[G]中寻求满足条件的(a, b)。若l + r + c &lt; 0，则说明l过小，将l排除，并继续判断l的下一位元素；反之则说明r过大，将r排除，并继续判断r的上一位元素，通过不断地比较，最后便可以得到所有满足l + r + c = 0条件的(a, b)。因为排序的复杂度为$O(logn)$，枚举-c及在对[G]中(a,b)的复杂度均为$O(n)$，因此整体时间复杂度为$O(n^2)$。123456789101112131415161718192021222324252627282930class Solution &#123;public: vector&lt;vector&lt;int&gt; &gt; threeSum(vector&lt;int&gt;&amp; nums) &#123; vector&lt;vector&lt;int&gt; &gt; ans; vector&lt;int&gt; res; if (nums.size() &lt; 3) return ans; sort(nums.begin(), nums.end()); int l, r, len = nums.size(); for (int i=0; i&lt;len; i++) &#123; if (nums[i] &gt; 0) continue; //num[i]&gt;0说明无解 if (i&gt;0 &amp;&amp; nums[i] == nums[i-1]) continue; //重复元素无需判断 l = i+1; r = len-1; while(l &lt; r) &#123; if (nums[i] + nums[l] + nums[r] &gt; 0) r--; else if (nums[i] + nums[l] + nums[r] &lt; 0) l++; else &#123; res.clear(); res.push_back(nums[i]); res.push_back(nums[l]); res.push_back(nums[r]); ans.push_back(res); do &#123; r--; &#125;while(l&lt;r &amp;&amp; nums[r] == nums[r+1]); &#125; &#125; &#125; return ans; &#125;&#125;;]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MHW第一次灭尽龙狩猎]]></title>
     <url>%2Fposts%2Ffafc5ac4%2F</url>
     <content type="text"><![CDATA[纪念第一次的古龙讨伐任务]]></content>
